@@ -15,6 +15,7 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 gem 'rails-ujs'
+gem 'devise', '~> 4.9', '>= 4.9.4'
 
 gem "bootsnap", require: false
 gem "kamal", require: false
