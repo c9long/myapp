@@ -20,9 +20,9 @@ gem 'devise', '~> 4.9', '>= 4.9.4'
 gem "bootsnap", require: false
 gem "kamal", require: false
 gem "thruster", require: false
+gem "pg", "~> 1.1"
 
 group :production do
-  gem "pg"
   gem "rails_12factor"
 end
 
@@ -34,7 +34,6 @@ end
 
 group :development do
   gem "web-console"
-  gem "sqlite3", ">= 2.1"
 end
 
 group :test do
