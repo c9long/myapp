@@ -2,7 +2,6 @@ source "https://rubygems.org"
 
 gem "rails", "~> 8.0.0", ">= 8.0.0.1"
 gem "propshaft"
-gem "sqlite3", ">= 2.1"
 gem "puma", ">= 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -21,6 +20,11 @@ gem "bootsnap", require: false
 gem "kamal", require: false
 gem "thruster", require: false
 
+group :production do
+  gem "pg"
+  gem "rails_12factor"
+end
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
   gem "brakeman", require: false
@@ -29,6 +33,7 @@ end
 
 group :development do
   gem "web-console"
+  gem "sqlite3", ">= 2.1"
 end
 
 group :test do
