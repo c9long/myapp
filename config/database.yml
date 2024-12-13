@@ -81,8 +81,8 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: myapp_production
-    username: myapp
+    database: myapp_db_ts4b
+    username: myapp_db_ts4b_user
     password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
